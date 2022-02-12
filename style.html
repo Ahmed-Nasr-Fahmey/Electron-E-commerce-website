@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allison&family=Lobster&family=Rampart+One&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <title>Electron Tech</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="admin.html" id="navbar__logo"><b>E</b>lectron <B>T</B>ech</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    <div id="page">
+
+        <div id="container">
+            <form action="index.html" method="GET">
+                <h1></h1>
+                <label for="bg1">Change Background Color : </label>
+                <input type="text" id="bg1" placeholder="Enter Your Color "><br>
+                <label for="fs">Change Font Size : </label>
+                <span id="s1"><input type="range" id="fs" min="14" max="30" step="2" value="16"></span><br>
+                <label for="fc1">Change Font Color : </label>
+                <input type="text" id="fc1" placeholder="Enter Your Color"><br>
+                <label for="ft">Change Font Type : </label>
+                <select name="fonts" id="ft"> 
+                <option >Rampart One</option>
+                <option >Roboto Mono</option>
+                <option >Allison</option>
+                <option >Lobster</option>
+            </select><br>
+                <label for="is">Change Image : </label>
+                <input type="button" value="Replace" onclick="change2();"><br>
+                <label for="bsc1">Change nav bar & footer Color : </label>
+                <input type="text" id="bsc1" placeholder="Enter Your Color"><br>
+
+                <input type="button" id="btn1" value="Change" onclick="change1();">
+
+            </form>
+        </div>
+        <div id="img">
+            <img src="images/Remini20210821003833470.jpg" id="myImg">   
+        </div>
+        <div id="para">
+           <p id="imgpara"> <b>T</b>echnicians: <br>
+               Ahmed , Aya.M , Mohamed , Salah , Eman , Aya.H
+           </p>  
+        </div>
+        
+    </div>
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-section about"></div>
+            <div class="footer-section links"></div>
+            <div class="footer-section contact-form"></div>
+
+        </div>
+        <div class="footer-bottom">
+            &copy; Electron-Tech.com |Desighned By <h2>Technicians</h2>
+            
+        </div>
+    </div>
+    <script>
+
+function change1() {
+
+var bgc1 = document.getElementById("bg1").value;
+
+var fss = document.getElementById("fs").value + "px";
+
+var fc = document.getElementById("fc1").value;
+
+
+
+var fotnav = document.getElementById("bsc1").value;
+
+
+
+
+document.getElementById('img').style.backgroundColor = bgc1;
+document.getElementById('container').style.backgroundColor = bgc1;
+document.getElementById('para').style.backgroundColor = bgc1;
+
+document.getElementById("imgpara").style.fontSize = fss;
+document.getElementById("imgpara").style.color = fc;
+
+document.getElementById("navbar").style.backgroundColor = fotnav;
+document.getElementById('ftr').style.backgroundColor = fotnav;
+
+
+
+
+var select = document.getElementById('ft');
+var value = select.options[select.selectedIndex].value;
+document.getElementById("imgpara").style.fontfamily = value;
+
+
+}
+
+function change2() {
+    var image = document.createElement("img");
+    image.src = "images/Remini20210821003833470.jpg";
+    if (image.src == document.getElementById("myImg").src) {
+        document.getElementById("myImg").src = "images/Remini20210821004000476.jpg";
+    }
+    else {
+        document.getElementById("myImg").src = "images/Remini20210821003833470.jpg";
+    }
+}
+    </script>
+</body>
+
+</html>
+

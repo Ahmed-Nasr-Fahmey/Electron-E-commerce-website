@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electron Tech</title>
+    <link rel="stylesheet" href="posts , creat posts.css">
+
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="admin.html" id="navbar__logo"><b>E</b>lectron <B>T</B>ech</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="admin-wrapper">
+        
+        <!-- left side bar-->
+        <div class="left-sidebar">
+           
+        </div>
+
+        <!--//left side bar -->
+
+        <!--admin content-->
+        <div class="admin-content">
+            <div class="button-groub">
+               
+            </div>
+            <div class="content">
+                <h2 class="page-title">Add Products</h2>
+                <form action="create.html" method="POST">
+                    <div>
+                        <label>Title</label>
+                        <input type="text" name="title" class="Text-input" >
+                    </div>
+                    <div>
+                        <label>Product Description</label>
+                        <textarea name="Body" id="Body" cols="30" rows="10" style="width: 500px;"></textarea>
+                    </div>
+                    <div>
+                        <label>Image</label>
+                        <input type="file" name="image" class="Texe-input"
+                    </div>
+                    <div>
+                        <label>Topic</label>
+                        <select name="topic" class="Text-input">
+                            <option value="laptops">laptops</option>
+                            <option value="phones">Phones</option>
+                            <option value="Electrical devices">Electrical machines</option>
+
+                            
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-big" style="color:brown;">Publish </button>
+                    </div>
+        
+
+                    
+                </form>
+            </div>
+
+        </div>
+        <!--//admin content-->
+
+        
+    </div>
+    
+  
+</body>
+</html>

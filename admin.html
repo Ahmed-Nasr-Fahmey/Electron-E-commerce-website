@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electron Tech</title>
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+<body>
+         <header>
+            <label  id="dark-change"></label>
+         </header>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="admin.html" id="navbar__logo"><b>E</b>lectron <B>T</B>ech</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="side-box">
+        <a class="home-btn" onclick="tap();">LogOut</a>
+    </div>
+
+    <div class="admin-wrapper">
+        
+        <!-- left side bar-->
+        <div class="left-sidebar">
+            <ul>
+                <li><a href="posts.html" style="color: burlywood;">Manage.Posts</a></li>
+                <li><a href="user.html" style="color: burlywood;">Manage.Users</a></li>
+                <li><a href="topics.html" style="color: burlywood;">Manage.Topics</a></li>
+                <li><a href="style.html" style="color: burlywood;">Manage.Style</a></li>
+            </ul>
+
+        </div>
+
+        <!--//left side bar -->
+
+        <!--admin content-->
+       <div class="admin-content">
+            <div class="button-groub">
+                <a href="creat posts.html" class="btn btn-big" style="color: burlywood; font-size: 25px; " >Add Product</a>
+                
+                
+
+            </div>
+            <div class="content">
+                <h2 class="page-title">Manage Products</h2>
+                <table>
+                    <thead>
+                        <th>SN</th>
+                        <th>Title</th>
+                        <th>Seller</th>
+                        <th colspan="3">Action</th>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>this is the first product </td>
+                            <td>Ahmed Nasr</td>
+                            <td><a href="#" class="Edit">Edit</a></td>
+                            <td><a href="#" class="Delete">Delete</a></td>
+                            <td><a href="#" class="Publish">Publish</a></td>
+
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>this is the second product </td>
+                            <td>Aya Mohamed</td>
+                            <td><a href="#" class="Edit">Edit</a></td>
+                            <td><a href="#" class="Delete">Delete</a></td>
+                            <td><a href="#" class="Publish">Publish</a></td>
+
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>this is the Third product </td>
+                            <td>Eman Ahmed</td>
+                            <td><a href="#" class="Edit">Edit</a></td>
+                            <td><a href="#" class="Delete">Delete</a></td>
+                            <td><a href="#" class="Publish">Publish</a></td>
+
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>this is the fourth product </td>
+                            <td>Mohamed Fawzy</td>
+                            <td><a href="#" class="Edit">Edit</a></td>
+                            <td><a href="#" class="Delete">Delete</a></td>
+                            <td><a href="#" class="Publish">Publish</a></td>
+
+                        </tr><tr>
+                            <td>5</td>
+                            <td>this is the fifth product </td>
+                            <td>Aya Hazzem</td>
+                            <td><a href="#" class="Edit">Edit</a></td>
+                            <td><a href="#" class="Delete">Delete</a></td>
+                            <td><a href="#" class="Publish">Publish</a></td>
+
+                        </tr><tr>
+                            <td>6</td>
+                            <td>this is the sixth product </td>
+                            <td>Salah Mohamed</td>
+                            <td><a href="#" class="Edit">Edit</a></td>
+                            <td><a href="#" class="Delete">Delete</a></td>
+                            <td><a href="#" class="Publish">Publish</a></td>
+
+                        </tr>
+
+
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <!--//admin content-->
+
+        
+    </div>
+    <!--footer-->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-section about"></div>
+            <div class="footer-section links"></div>
+            <div class="footer-section contact-form"></div>
+
+        </div>
+        <div class="footer-bottom">
+            &copy; Electron-Tech.com |Desighned By <h2>Technicians</h2>
+            
+        </div>
+    </div>
+    <script>
+        var content = document.getElementsByTagName('body')[0];
+        var darkMode = document.getElementById('dark-change');
+        darkMode.addEventListener('click', function(){
+            darkMode.classList.toggle('active');
+            content.classList.toggle('night');
+        })
+
+
+
+        function tap()
+      {
+        window.top.close();
+        window.open("index.html")
+
+      }
+    
+    </script>
+</body>
+</html>

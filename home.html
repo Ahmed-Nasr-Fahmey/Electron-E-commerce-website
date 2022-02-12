@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
+    <link rel="stylesheet" href="home.css">
+    
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electron Tech</title>
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus icon'></i>
+        <div class="logo_name"><b>E</b>lectron <b>T</b>ech</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a href="home.html">
+            <i class='bx bx-user' ></i>
+            <span class="links_name">MY Profile</span>
+          </a>
+          <span class="tooltip">MY Profile</span>
+      </li>
+      <li>
+        <a href="laptop.html">
+            <i class='bx bx-grid-alt'></i>
+            <span class="links_name">Laptops</span>
+          </a>
+           <span class="tooltip">Laptops</span>
+     </li>
+     <li>
+       <a href="phones.html">
+         <i class='bx bx-grid-alt' ></i>
+         <span class="links_name">Phons</span>
+       </a>
+       <span class="tooltip">Phons</span>
+     </li>
+     <li>
+       <a href="electric machines.html">
+         <i class='bx bx-grid-alt' ></i>
+         <span class="links_name">Electrec Machines</span>
+       </a>
+       <span class="tooltip">Electrec Machines</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-heart' ></i>
+         <span class="links_name">Products Loved</span>
+       </a>
+       <span class="tooltip">Products Loved</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-cog' ></i>
+         <span class="links_name">Setting</span>
+       </a>
+       <span class="tooltip">Setting</span>
+     </li>
+     <li>
+        <a>
+          <i class='bx bx-log-out' ></i>
+          <span class="links_name" onclick="tap();">Logout</span>
+        </a>
+        <span class="tooltip" onclick="tap();">Logout</span>
+      </li>
+     <li class="profile">
+         <div class="profile-details">
+           <img src="images/Remini20210821003833470.jpg" alt="profileImg">
+           <div class="name_job">
+             <div class="name">Technicians</div>
+             <div class="job">Web designers</div>
+           </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li>
+    </ul>
+  </div>
+  <section class="home-section">
+      <div class="text"><b>E</b>lectron <b>T</b>ech</div>
+      <div class="slider">
+
+        <div id="img">
+          <img src="jonas-lee-o6elTKWZ5bI-unsplash.jpg">
+        </div>
+    
+      </div>
+      <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4><span id="footer_logo">Electron Tech</span></h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">watch</a></li>
+                        <li><a href="#">bag</a></li>
+                        <li><a href="#">shoes</a></li>
+                        <li><a href="#">dress</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+    
+            <!--<a class="copyright" href="#">&#169; Copyright FCIS 2024. designed by our team</a>-->
+        </div>
+    </footer>
+  </section>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+
+  var images = ['james-mckinven-tpuAo8gVs58-unsplash.jpg', 'sidekix-media-VaGdhK-kI1c-unsplash.jpg', 'main__background.jpg', 'kisspng-evaporative-cooler-air-conditioning-home-appliance-cooler-5ac1f7fae32f63.9526866315226613709306.png', 'jonas-lee-o6elTKWZ5bI-unsplash.jpg'];
+      
+      var x = 0;
+  
+      var imgs = document.getElementById('img');
+  
+      setInterval(slider, 2000);
+  
+  
+      function slider() {
+  
+        if (x < images.length) {
+          x = x + 1;
+        } else {
+          x = 1;
+        }
+  
+  
+        imgs.innerHTML = "<img src=" + images[x - 1] + ">";
+  
+  
+      }
+
+      function tap()
+      {
+        window.top.close();
+        window.open("index.html")
+
+      }
+  </script>
+  
+</body>
+</html>
+

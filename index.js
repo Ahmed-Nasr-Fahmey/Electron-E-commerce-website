@@ -2,14 +2,14 @@
 function openpg(){
     var a = document.getElementById("username").value;
     var b = document.getElementById("password").value;
-     if((a=="Aya Mohamed"||a=="mohamed"||a=="eman"||a=="salah"||a=="aya.h") && ( b=="123"))
+     if((a=="Aya Mohamed"||a=="mohamed"||a=="eman"||a=="aya.h") && ( b=="123"))
         {
          
          window.top.close();
          window.open("home.html")
          
         }
-        else if ((a=="Aya Mohamed"||a=="mohamed"||a=="eman"||a=="salah"||a=="aya.h") &&( b!="123"))
+        else if ((a=="Aya Mohamed"||a=="mohamed"||a=="eman"||a=="aya.h") &&( b!="123"))
         {
             alert("\" " + a + " \" "  +"You Have Entered Wrong Password")
         }

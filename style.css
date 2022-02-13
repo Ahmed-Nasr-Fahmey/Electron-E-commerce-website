@@ -8,25 +8,10 @@ body {
     background-image: url("images/altumcode-Ui3zMjpMrmM-unsplash.jpg");
     background-repeat: inherit;
     height: auto;
-   /* font-family: 'Allison', cursive;
-    font-family: 'Lobster', cursive;
-    font-family: 'Rampart One', cursive;
-    font-family: 'Roboto Mono', monospace;*/
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
-
-/*#navbar {
-    background:none;
-    height: 80px;
-    width: 100%;
-}
-
-#looogooo {
-    margin-left: 50px;
-    margin-top: -3px;
-}*/
 
 #page {
     position: relative;
@@ -136,38 +121,6 @@ select {
     border-radius: 20px;
 }
 
-/*footer {
-    display: grid;
-    background: rgb(76, 21, 128);
-    padding: 10px;
-    position: absolute;
-    width: 98.65%;
-    /*    top: 589px; */
-    /*top: 690px;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-#copyright {
-    font-weight: bold;
-    font-size: 20px;
-}
-
-#d2 {
-    display: flex;
-    justify-content: center;
-}
-
-#googleicon,
-#facebookicon,
-#twittericon {
-    padding: 0px 10px;
-}
-
-#PP {
-    margin-left: 100px;
-    font-weight: bold;
-    font-size: 20px;
-}*/
 .navbar{
     height: 80px;
     display: flex;

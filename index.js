@@ -13,12 +13,12 @@ function openpg(){
         {
             alert("\" " + a + " \" "  +"You Have Entered Wrong Password")
         }
-        else if ((a=="Ahmed Nasr") &&( b=="Ahmed123"))
+        else if ((a=="Ahmed Nasr") &&( b=="admin"))
         {
              window.top.close();
              window.open("admin.html")
         }
-        else if ((a=="Ahmed Nasr") &&( b !="Ahmed123"))
+        else if ((a=="Ahmed Nasr") &&( b !="admin"))
         {
             alert("\" " + a + " \" "  +"You Have Entered Wrong Password")
         }
